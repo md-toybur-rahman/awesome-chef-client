@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
-import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
+import { MdFavorite } from "react-icons/md";
 
 
-const RecipeCard = ({recipe}) => {
+const RecipeCard = ({ recipe }) => {
     const [favorite, setFavorite] = useState(false)
-    const {recipe_name, image_url} = recipe;
+    const { recipe_name, image_url, description } = recipe;
+    console.log(recipe);
     const favoriteHandler = () => {
         setFavorite(true);
     }
     return (
         <div>
-            <Card style={{ width: '18rem', backgroundColor: '#0E1317', color: 'white', border: '2px solid #C19977' }}>
-                <Card.Img style={{height: '284px'}} variant="top" src={image_url} />
+            <Card style={{ width: '18rem', backgroundColor: '#0E1317', color: 'white', border: '2px solid #C19977', height: '100%' }}>
+                <Card.Img style={{ height: '284px' }} variant="top" src={image_url} />
                 <Card.Body>
                     <h3>{recipe_name}</h3>
                     <div>
-                        <h5>Years of Experience: {}</h5>
-                        <h5>Number of Recipes: {}</h5>
-                        <h6 className='d-flex align-items-center gap-2'><span className='fs-4'>❤</span> {}</h6>
+                        <h5 className='my-3'>{description}</h5>
                     </div>
-                    {
-                        favorite ? <button className='custom-btn' disabled><MdFavorite></MdFavorite></button> : <button onClick={favoriteHandler} className='custom-btn'><MdFavoriteBorder></MdFavoriteBorder></button>
-                    }
-                    
                 </Card.Body>
+                <div className='ms-3 mb-3'>
+                    {
+                        favorite ? <button style={{backgroundColor: ' transparent', color: 'gray', border: 'none'}} disabled><MdFavorite style={{fontSize: '30px'}}></MdFavorite></button> : <button style={{backgroundColor: ' transparent', color: 'red', border: 'none'}} onClick={favoriteHandler}><MdFavorite style={{fontSize: '30px'}}></MdFavorite></button>
+                    }
+                </div>
             </Card>
         </div>
     );

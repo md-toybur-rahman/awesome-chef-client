@@ -35,7 +35,7 @@ const Recipes = () => {
                     }
                 </CardGroup>
             </div>
-            <div>
+            <div className='text-center my-5'>
                 <Link to='/'><button className="custom-btn"> Go Back</button></Link>
             </div>
         </div>
