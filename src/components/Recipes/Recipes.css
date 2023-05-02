@@ -1,0 +1,25 @@
+.chef-image{
+    width: 200px;
+    border-radius: 20px;
+}
+.single-chef-container{
+    background-image: linear-gradient(to right, #424242 , rgba(193, 153, 119, 50%), #424242), url(https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.chef-container{
+    width: 500px;
+}
+.chef-info h1{
+    font-size: 60px;
+    font-weight: 600;
+}
+.chef-info h5{
+    font-size: 30px;
+    font-weight: 500;
+}
+.chef-info h6{
+    font-size: 20px;
+    font-weight: 500;
+}

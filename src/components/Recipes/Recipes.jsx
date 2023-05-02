@@ -1,16 +1,33 @@
 // import React from 'react';
+import './Recipes.css'
 
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Recipes = () => {
-    // const {id} = useParams();
     const recipe = useLoaderData();
+    const { name, picture, experience, recipes, description } = recipe;
     console.log(recipe);
     return (
-        <div>
-            <h1 style={{color: 'white'}}>{recipe.name}</h1>
-            <img src={recipe.picture} alt="" />
-            <Link to='/'><button className="custom-btn"> Go Back</button></Link>
+        <div className=''>
+            <div className='my-5 d-flex justify-content-center single-chef-container'>
+                <div className='mt-5 d-flex align-items-center chef-container'>
+                    {/* <img className="chef-image me-4" src={picture} alt="" /> */}
+                    <div className='chef-info text-center' style={{ color: 'white' }}>
+                        <h1>{name}</h1>
+                        <div className='d-flex justify-content-center gap-3 my-3'>
+                            <hr className='banner-hr' />
+                            <hr className='banner-hr' />
+                            <hr className='banner-hr' />
+                            <hr className='banner-hr' />
+                        </div>
+                        <h5>Years of Experience: {experience}</h5>
+                        <h6>{description}</h6>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <Link to='/'><button className="custom-btn"> Go Back</button></Link>
+            </div>
         </div>
     );
 };
