@@ -1,4 +1,6 @@
 // import React from 'react';
+import { CardGroup } from 'react-bootstrap';
+import RecipeCard from '../RecipeCard/RecipeCard';
 import './Recipes.css'
 
 import { Link, useLoaderData } from "react-router-dom";
@@ -24,6 +26,14 @@ const Recipes = () => {
                         <h6>{description}</h6>
                     </div>
                 </div>
+            </div>
+            <div className='chef'>
+                <h1 className='title text-center mb-5'>{name} Recipes</h1>
+                <CardGroup className='gap-3 justify-content-center'>
+                    {
+                        recipes.map(recipe => <RecipeCard key={Math.random()} recipe={recipe}></RecipeCard>)
+                    }
+                </CardGroup>
             </div>
             <div>
                 <Link to='/'><button className="custom-btn"> Go Back</button></Link>
