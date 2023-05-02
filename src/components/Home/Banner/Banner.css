@@ -1,0 +1,26 @@
+.banner-container{
+    background-image: linear-gradient(to right, #1c1c1c , rgba(193, 153, 119, 50%)), url(https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.welcome{
+    color: rgb(193, 153, 119);
+    font-size: 30px;
+}
+.title{
+    color: white;
+    font-size: 70px;
+}
+.banner-hr{
+    border: 7px solid white;
+    width: 50px;
+    border-radius: 7px;
+}
+.banner-description{
+    color: white;
+    width: 800px;
+    text-align: center;
+    letter-spacing: .06em;
+    word-spacing: .3em;
+}

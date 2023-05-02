@@ -1,0 +1,24 @@
+.nav-container{
+    background-color: black;
+    color: white;
+    height: 100px;
+}
+.logo{
+    color: #C19977;
+}
+.page{
+    font-size: 22px;
+}
+.page a{
+    text-decoration: none;
+    margin-right: 20px;
+}
+.profile img{
+    width: 45px;
+    border-radius: 50%;
+}
+.btn-login{
+    background-color: #C19977;
+    padding: 5px 15px;
+    font-size: 20px;
+}
