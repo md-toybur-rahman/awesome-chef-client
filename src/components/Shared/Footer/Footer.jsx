@@ -3,7 +3,7 @@
 const Footer = () => {
     return (
         <div>
-            <h2>This is Footer</h2>
+            <h2 style={{color: 'white'}}>This is Footer</h2>
         </div>
     );
 };
