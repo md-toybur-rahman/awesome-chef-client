@@ -6,14 +6,16 @@ import './Main.css'
 
 const Main = () => {
     return (
-        <Container className='main-container'>
-            <Header></Header>
-            <div className='outlet'>
-                <Outlet></Outlet>
-            </div>
-            <Footer></Footer>
+        <div style={{backgroundColor: '#0E1317'}}>
+            <div className='main-container'>
+                <Header></Header>
+                <div className='outlet'>
+                    <Outlet></Outlet>
+                </div>
+                <Footer></Footer>
 
-        </Container>
+            </div>
+        </div>
     );
 };
 

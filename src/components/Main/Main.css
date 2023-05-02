@@ -1,5 +1,7 @@
 .main-container{
     background-color: #0E1317;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 .outlet{
     min-height: 100vh;

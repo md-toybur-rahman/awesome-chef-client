@@ -22,7 +22,7 @@ const RecipeCard = ({ recipe }) => {
                 </Card.Body>
                 <div className='ms-3 mb-3'>
                     {
-                        favorite ? <button style={{backgroundColor: ' transparent', color: 'gray', border: 'none'}} disabled><MdFavorite style={{fontSize: '30px'}}></MdFavorite></button> : <button style={{backgroundColor: ' transparent', color: 'red', border: 'none'}} onClick={favoriteHandler}><MdFavorite style={{fontSize: '30px'}}></MdFavorite></button>
+                        favorite ? <button style={{backgroundColor: ' transparent', color: 'red', border: 'none'}} disabled><MdFavorite style={{fontSize: '30px'}}></MdFavorite></button> : <button style={{backgroundColor: ' transparent', color: 'gray', border: 'none'}} onClick={favoriteHandler}><MdFavorite style={{fontSize: '30px'}}></MdFavorite></button>
                     }
                 </div>
             </Card>

@@ -1,0 +1,20 @@
+.footer{
+    margin-top: 100px;
+    padding: 70px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+}
+.footer-middle{
+    width: 400px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 576px) {
+    .footer {
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
