@@ -2,7 +2,6 @@
 import { CardGroup } from 'react-bootstrap';
 import RecipeCard from '../RecipeCard/RecipeCard';
 import './Recipes.css'
-import { ToastContainer } from 'react-toastify';
 
 import { Link, useLoaderData } from "react-router-dom";
 

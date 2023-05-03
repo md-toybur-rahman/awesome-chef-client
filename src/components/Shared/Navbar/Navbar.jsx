@@ -1,9 +1,11 @@
 import './Navbar.css'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { MdMenu, MdClose } from "react-icons/md";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navbar = () => {
+    const user = useContext(AuthContext);
     const [isClicked, setIsClicked] = useState(false);
     const clickHandler = () => {
         setIsClicked(!isClicked);
@@ -33,7 +35,9 @@ const Navbar = () => {
                 <div className='profile me-4'>
                     <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" />
                 </div>
-                <button className='custom-btn navbar-btn'>Sign up</button>
+                <h2 style={{color: 'white'}}></h2>
+                <Link to='/register'><button className='custom-btn navbar-btn'>Sign up</button></Link>
+                <Link to='/login'><button className='custom-btn navbar-btn'>Login</button></Link>
             </div>
         </div>
     );
