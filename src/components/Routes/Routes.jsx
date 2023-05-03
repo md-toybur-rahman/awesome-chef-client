@@ -3,6 +3,7 @@ import Main from "../Main/Main";
 import Home from "../Home/Home";
 import Blog from "../Blog/Blog";
 import Recipes from "../Recipes/Recipes";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
                 element: <Recipes></Recipes>,
                 loader: ({ params }) => fetch(`https://awesome-chef-server-md-toybur-rahman.vercel.app/chef/${params.id}`)
             }
-        ]
+        ],
+        errorElement: <ErrorPage></ErrorPage>
     }
 ])
 

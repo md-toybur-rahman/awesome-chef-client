@@ -1,0 +1,25 @@
+.error-container{
+    background-image: linear-gradient(to right, #424242 , rgba(193, 153, 119, 50%), #424242), url(https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.opps{
+    font-size: 100px;
+    font-weight: 700;
+}
+.status{
+    font-size: 50px;
+    font-weight: 700;
+}
+.status-text{
+    font-weight: 700;
+    font-size: 30px;
+}
+.message{
+    font-size: 30px;
+    font-weight: 700;
+}

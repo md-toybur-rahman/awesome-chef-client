@@ -2,16 +2,17 @@
 import { CardGroup } from 'react-bootstrap';
 import RecipeCard from '../RecipeCard/RecipeCard';
 import './Recipes.css'
+import { ToastContainer } from 'react-toastify';
 
 import { Link, useLoaderData } from "react-router-dom";
 
 const Recipes = () => {
     const recipe = useLoaderData();
-    const { name, picture, experience, recipes, description } = recipe;
+    const { name, experience, recipes, description } = recipe;
     console.log(recipe);
     return (
         <div className=''>
-            <div className='my-5 d-flex justify-content-center single-chef-container'>
+            <div className='mb-5 d-flex justify-content-center single-chef-container'>
                 <div className='mt-5 d-flex align-items-center chef-container'>
                     {/* <img className="chef-image me-4" src={picture} alt="" /> */}
                     <div className='chef-info text-center' style={{ color: 'white' }}>
