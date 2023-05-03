@@ -5,12 +5,13 @@
     background-size: cover;
 }
 .welcome{
-    color: rgb(193, 153, 119);
+    color: white;
     font-size: 30px;
 }
 .title{
     color: white;
     font-size: 70px;
+    text-align: center;
 }
 .banner-hr{
     border: 7px solid white;
@@ -19,7 +20,7 @@
 }
 .banner-description{
     color: white;
-    width: 800px;
+    max-width: 800px;
     text-align: center;
     letter-spacing: .06em;
     word-spacing: .3em;

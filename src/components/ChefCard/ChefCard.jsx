@@ -7,7 +7,7 @@ import { Card } from "react-bootstrap";
 const ChefCard = ({ chef }) => {
     const {name, picture, experience, recipes, likes, id} = chef;
     return (
-        <div>
+        <div className='chef-card'>
             <Card style={{ width: '18rem', backgroundColor: '#0E1317', color: 'white', border: '2px solid #C19977'}}>
                 <Card.Img className="chef-picture" variant="top" src={picture} />
                 <Card.Body>

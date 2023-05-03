@@ -1,14 +1,17 @@
 * {
     font-family: 'Barlow Condensed', sans-serif;
 }
-.test{
+
+.test {
     font-weight: 500;
     font-size: 100px;
 }
-.chef{
+
+.chef {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+

@@ -1,27 +1,80 @@
-.nav-container{
+.nav-container {
     background-color: black;
     color: white;
     height: 100px;
+    position: relative;
 }
-.logo{
+
+.menuIcon {
+    display: none;
+}
+
+.logo {
     color: #C19977;
 }
-.page{
+
+.page {
     font-size: 22px;
 }
-.page a{
+
+.page a {
     text-decoration: none;
     margin-right: 20px;
 }
-.profile img{
+
+.profile img {
     width: 45px;
     border-radius: 50%;
 }
-.custom-btn{
+
+.custom-btn {
     background-color: #C19977;
     background-color: #0E1317;
     color: white;
     border: 2px solid #C19977;
     padding: 5px 15px;
     font-size: 18px;
+}
+
+.phone-page {
+    position: absolute;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    top: 100px;
+    background-color: black;
+    left: 0;
+    padding: 20px;
+    animation-name: navbarIn;
+    animation-duration: .5s;
+}
+
+@keyframes navbarIn {
+    from {
+        left: -100px
+    }
+
+    to {
+        left: 0px
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .page {
+        display: none;
+    }
+
+    .navbar-btn {
+        display: none;
+    }
+
+    .menuIcon {
+        display: block;
+        font-size: 35px;
+        color: #C19977;
+    }
+
+    .profile img {
+        width: 35px;
+    }
 }
