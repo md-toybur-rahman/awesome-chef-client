@@ -1,7 +1,8 @@
 .form-design{
     background-color: black;
     color: white;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 50px;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import { CardGroup } from 'react-bootstrap';
 import RecipeCard from '../RecipeCard/RecipeCard';
 import './Recipes.css'
@@ -8,7 +8,6 @@ import { Link, useLoaderData } from "react-router-dom";
 const Recipes = () => {
     const recipe = useLoaderData();
     const { name, experience, recipes, description } = recipe;
-    console.log(recipe);
     return (
         <div className=''>
             <div className='mb-5 d-flex justify-content-center single-chef-container'>

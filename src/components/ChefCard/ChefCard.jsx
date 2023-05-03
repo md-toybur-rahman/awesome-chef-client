@@ -13,9 +13,13 @@ const ChefCard = ({ chef }) => {
                 <Card.Body>
                     <h3>{name}</h3>
                     <Card.Text>
-                        <h5>Years of Experience: {experience}</h5>
-                        <h5>Number of Recipes: {recipes.length}</h5>
-                        <h6 className='d-flex align-items-center gap-2'><span className='fs-4'>❤</span> {likes}</h6>
+                        <span>Years of Experience: {experience}</span>
+                    </Card.Text>
+                    <Card.Text>
+                        <span>Number of Recipes: {recipes.length}</span>
+                    </Card.Text>
+                    <Card.Text>
+                        <span className='d-flex align-items-center gap-2'><span className='fs-4'>❤</span> {likes}</span>
                     </Card.Text>
                     <Link to={`/chef/${id}`}><button className='custom-btn'>View Recipes</button></Link>
                 </Card.Body>

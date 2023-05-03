@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 const RecipeCard = ({ recipe }) => {
     const [favorite, setFavorite] = useState(false)
     const { recipe_name, image_url, description } = recipe;
-    console.log(recipe);
     const favoriteHandler = () => {
         setFavorite(true);
         toast("Added to Favorite");
