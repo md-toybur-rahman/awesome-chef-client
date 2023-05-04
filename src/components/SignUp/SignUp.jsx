@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
 import Form from 'react-bootstrap/Form';
 import './SignUp.css'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthProviderContext } from '../../Provider/Provider';
 
 const SignUp = () => {
-    const { createUser, user } = useContext(AuthProviderContext);
-
+    const { createUser, user, googleSignUp } = useContext(AuthProviderContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.pathname || '/'
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
@@ -20,10 +22,16 @@ const SignUp = () => {
             .then(res => {
                 const user = res.user;
                 console.log(user);
-                userName(name);
+                navigate(from, { replace: true })
             })
             .catch(error => console.log(error))
-        user.displayName = name;
+    }
+    const googleHandle = () => {
+        googleSignUp()
+            .then(res => {
+                console.log(res.user)
+            })
+            .catch()
     }
     return (
         <div className='form-design'>
@@ -61,7 +69,7 @@ const SignUp = () => {
                     </button>
                 </div>
                 <div className='d-flex flex-column'>
-                    <button className='custom-btn mt-3 d-flex align-items-center justify-content-center'><FaGoogle className='me-2'></FaGoogle> Sign In With Google</button>
+                    <button onClick={googleHandle} className='custom-btn mt-3 d-flex align-items-center justify-content-center'><FaGoogle className='me-2'></FaGoogle> Sign In With Google</button>
                     <button className='custom-btn mt-3 d-flex align-items-center justify-content-center'><FaGithub className='me-2'></FaGithub> Sign In With Github</button>
                 </div>
             </Form>
