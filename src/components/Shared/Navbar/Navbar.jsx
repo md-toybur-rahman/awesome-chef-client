@@ -7,7 +7,6 @@ import { AuthProviderContext } from '../../../Provider/Provider';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthProviderContext);
-    console.log(user);
     const [isClicked, setIsClicked] = useState(false);
     const clickHandler = () => {
         setIsClicked(!isClicked);
@@ -39,8 +38,11 @@ const Navbar = () => {
                     </nav>
             }
             <div className='d-flex align-items-center'>
-                <div className='profile me-4'>
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" />
+                <div className={`profile me-4  ${user?.displayName ? 'tooltip-name' : ''}`}>
+                    <img src={!user?.photoURL? "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" : user.photoURL} alt="" />
+                    {
+                        user?.displayName ? <span className='tooltipText'>{user?.displayName}</span> : <></>
+                    }
                 </div>
                 {
                     user ?

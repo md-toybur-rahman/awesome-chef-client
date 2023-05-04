@@ -1,12 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import './SignUp.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthProviderContext } from '../../Provider/Provider';
 
 const SignUp = () => {
-    const { createUser, user, googleSignUp } = useContext(AuthProviderContext);
+    const [accepted, setAccepted] = useState(false);
+    const [error, setError] = useState('');
+    const { createUser } = useContext(AuthProviderContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.pathname || '/'
@@ -17,7 +18,11 @@ const SignUp = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        // console.log(name, email, password);
+        console.log(name, email, password);
+        if(password.length > 6){
+            setError('Sorry! Password should be less than 6 characters')
+            return ;
+        }
         createUser(email, password)
             .then(res => {
                 const user = res.user;
@@ -26,12 +31,8 @@ const SignUp = () => {
             })
             .catch(error => console.log(error))
     }
-    const googleHandle = () => {
-        googleSignUp()
-            .then(res => {
-                console.log(res.user)
-            })
-            .catch()
+    const handleAccepted = event => {
+        setAccepted(event.target.checked)  
     }
     return (
         <div className='form-design'>
@@ -39,7 +40,7 @@ const SignUp = () => {
             <Form onSubmit={handleSignUp} className='w-25 form'>
                 <Form.Group className="mb-3">
                     <Form.Label>Your Name</Form.Label>
-                    <Form.Control name='name' type="text" placeholder="Your Name" />
+                    <Form.Control name='name' type="text" placeholder="Your Name" required/>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Photo URL</Form.Label>
@@ -57,20 +58,24 @@ const SignUp = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control name='password' type="password" placeholder="Password" />
                 </Form.Group>
+                <Form.Text className="text-white">
+                    <p>The Password should be less than 6 characters</p>
+                    <p className='text-danger'>{error}</p>
+                </Form.Text>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Accept Trams and Condition" />
+                    <Form.Check
+                        onClick={handleAccepted}
+                        type="checkbox"
+                        name="accept"
+                        label={"Accept Terms and Condition"} />
                 </Form.Group>
                 <Form.Text className="text-white">
                     <p>Already have an account? Please <Link to='/login'>Login</Link></p>
                 </Form.Text>
                 <div className='d-flex justify-content-center mt-5'>
-                    <button className='custom-btn' type="submit">
+                    <button className={!accepted ? 'custom-btn-disabled':'custom-btn'} disabled={!accepted} type="submit">
                         Sign Up
                     </button>
-                </div>
-                <div className='d-flex flex-column'>
-                    <button onClick={googleHandle} className='custom-btn mt-3 d-flex align-items-center justify-content-center'><FaGoogle className='me-2'></FaGoogle> Sign In With Google</button>
-                    <button className='custom-btn mt-3 d-flex align-items-center justify-content-center'><FaGithub className='me-2'></FaGithub> Sign In With Github</button>
                 </div>
             </Form>
         </div>

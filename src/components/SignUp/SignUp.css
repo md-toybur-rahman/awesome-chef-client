@@ -13,3 +13,8 @@
     border: 2px solid #C19977;
     padding: 50px;
 }
+.custom-btn-disabled{
+    border: 2px solid #C19977;
+    padding: 5px 15px;
+    font-size: 18px;
+}
