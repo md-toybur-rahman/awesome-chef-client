@@ -37,7 +37,7 @@ const Recipes = () => {
                 </div>
             </div>
             <div className='chef'>
-                <h1 className='title text-center mb-5'>{name} Recipes</h1>
+                <h1 className='section-title text-center mb-5'>{name} Recipes</h1>
                 <CardGroup className='gap-3 justify-content-center'>
                     {
                         recipes.map(recipe => <RecipeCard key={Math.random()} recipe={recipe}></RecipeCard>)

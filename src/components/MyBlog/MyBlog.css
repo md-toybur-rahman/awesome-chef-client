@@ -1,0 +1,21 @@
+.blog{
+    border: 3px solid #C19977;
+    margin-bottom: 30px;
+    min-height: 150px;
+    color: white;
+    padding: 20px;
+}
+.blog-container{
+    margin: 100px;
+
+}
+.blog-container .section-title{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.blog h3{
+    color: white;
+}
+.highlight{
+    color: #C19977;
+}

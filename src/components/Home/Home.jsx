@@ -5,7 +5,6 @@ import { Outlet, useLoaderData } from 'react-router-dom';
 import ChefCard from '../ChefCard/ChefCard';
 import { CardGroup } from 'react-bootstrap';
 import About from './About/About';
-import Services from './Services/Services';
 const Home = () => {
     const chefData = useLoaderData();
     return (
