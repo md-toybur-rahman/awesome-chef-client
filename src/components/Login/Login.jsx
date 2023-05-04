@@ -64,7 +64,7 @@ const Login = () => {
                     <Form.Control type="password" name='password' placeholder="Password" />
                 </Form.Group>
                 <Form.Text className="text-muted">
-                    <p>{error == 'Wrong Password. Please try again.' ? <p className='text-danger'>Wrong Password. Please try again.</p> : 'Password should be less then 6 character'}</p>
+                    <p>{error == 'Wrong Password. Please try again.' ? <span className='text-danger'>Wrong Password. Please try again.</span> : 'Password should be less then 6 character'}</p>
                 </Form.Text>
                 <Form.Text className="text-white">
                     <p>Create a New Account Please <Link to='/register'>Sign up</Link></p>

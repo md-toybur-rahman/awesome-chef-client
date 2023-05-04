@@ -4,6 +4,7 @@ import Banner from './Banner/Banner';
 import { useLoaderData } from 'react-router-dom';
 import ChefCard from '../ChefCard/ChefCard';
 import { CardGroup } from 'react-bootstrap';
+import About from './About/About';
 const Home = () => {
     const chefData = useLoaderData();
     return (
@@ -20,6 +21,11 @@ const Home = () => {
                     }
                 </CardGroup>
             </div>
+
+            <div className='text-white'>
+                    <About></About>
+            </div>
+
         </div>
     );
 };
