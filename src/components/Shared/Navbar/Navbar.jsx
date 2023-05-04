@@ -24,13 +24,16 @@ const Navbar = () => {
                 }
             </div>
             <div className='logo'>
-                <h1>Awes<span className='border border-3 border-warning-subtle rounded-circle'>👨‍🍳</span>me Chef</h1>
+                <h1><Link to='/'>Awes<span className='border border-3 border-warning-subtle rounded-circle'>👨‍🍳</span>me Chef</Link></h1>
             </div>
             {
                 isClicked ?
                     <nav className='phone-page'>
                         <NavLink style={({ isActive }) => isActive ? { color: '#C19977' } : { color: 'white' }} to='/'>Home</NavLink>
                         <NavLink style={({ isActive }) => isActive ? { color: '#C19977' } : { color: 'white' }} to='/blog'>Blog</NavLink>
+                        <NavLink style={!user ? {display: 'block', border: '1px solid #C19977', padding: '5px', marginTop: '10px'} : {display: 'none'}} to='/login'>Login</NavLink>
+                        <NavLink onClick={handleLogOut} style={user ? {display: 'block', border: '1px solid #C19977', padding: '5px', marginTop: '10px'} : {display: 'none'}} to='/'>Logout</NavLink>
+                        
                     </nav>
                     : <nav className='page '>
                         <NavLink style={({ isActive }) => isActive ? { color: '#C19977' } : { color: 'white' }} to='/'>Home</NavLink>

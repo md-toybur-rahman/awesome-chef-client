@@ -12,7 +12,7 @@ const Main = () => {
                 <div className='outlet'>
                     <Outlet></Outlet>
                 </div>
-                <Footer></Footer>
+                <Footer className='footer'></Footer>
 
             </div>
         </div>

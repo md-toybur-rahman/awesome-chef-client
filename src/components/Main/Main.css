@@ -6,3 +6,7 @@
 .outlet{
     min-height: 100vh;
 }
+.footer{
+    border-top: 2px solid #C19977;
+    margin-top: 200px;
+}

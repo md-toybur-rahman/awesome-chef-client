@@ -24,9 +24,7 @@ const RecipeCard = ({ recipe }) => {
                     </div>
                 </Card.Body>
                 <div className='ms-3 mb-3'>
-                    {
-                        favorite ? <button style={{ backgroundColor: ' transparent', color: 'red', border: 'none' }} disabled><MdFavorite style={{ fontSize: '30px' }}></MdFavorite></button> : <button style={{ backgroundColor: ' transparent', color: 'gray', border: 'none' }} onClick={favoriteHandler}><MdFavorite style={{ fontSize: '30px' }}></MdFavorite></button>
-                    }
+                    <button onClick={favoriteHandler} className={!favorite ? 'custom-btn' : 'custom-btn-disabled'} disabled={!favorite ? false : true}>Favorite</button>
                     <ToastContainer></ToastContainer>
 
                 </div>

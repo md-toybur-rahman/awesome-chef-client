@@ -50,7 +50,7 @@ const Login = () => {
     return (
         <div className='form-design'>
             <h2>Please Login</h2>
-            <Form onSubmit={handleSignIn} className='w-25 form'>
+            <Form onSubmit={handleSignIn} className='w-full form'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" name='email' placeholder="Enter email" />

@@ -7,22 +7,32 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const Recipes = () => {
     const recipe = useLoaderData();
-    const { name, experience, recipes, description } = recipe;
+    const { name, experience, recipes, description, picture, likes } = recipe;
     return (
         <div className=''>
             <div className='mb-5 d-flex justify-content-center single-chef-container'>
-                <div className='mt-5 d-flex align-items-center chef-container'>
-                    {/* <img className="chef-image me-4" src={picture} alt="" /> */}
-                    <div className='chef-info text-center' style={{ color: 'white' }}>
-                        <h1>{name}</h1>
-                        <div className='d-flex justify-content-center gap-3 my-3'>
+                <div className='mt-5 d-flex gap-5 align-items-center chef-container'>
+                    <div>
+                        <img style={{ height: '300px', borderRadius: '10px' }} src={picture} alt="" />
+                        <h1 className='name mt-3'>{name}</h1>
+                    </div>
+                    <div className='chef-info text-left' style={{ color: 'white' }}>
+                        <div className='d-flex  gap-3 my-3'>
                             <hr className='banner-hr' />
                             <hr className='banner-hr' />
                             <hr className='banner-hr' />
                             <hr className='banner-hr' />
                         </div>
                         <h5>Years of Experience: {experience}</h5>
-                        <h6>{description}</h6>
+                        <h6>Short Bio: {description}</h6>
+                        <h6>LIkes: {likes}</h6>
+                        <h6>Number Of Recipe: {recipes.length}</h6>
+                        <div className='d-flex gap-3 my-3'>
+                            <hr className='banner-hr' />
+                            <hr className='banner-hr' />
+                            <hr className='banner-hr' />
+                            <hr className='banner-hr' />
+                        </div>
                     </div>
                 </div>
             </div>

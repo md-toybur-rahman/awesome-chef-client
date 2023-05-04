@@ -37,7 +37,7 @@ const SignUp = () => {
     return (
         <div className='form-design'>
             <h2>Create an Account</h2>
-            <Form onSubmit={handleSignUp} className='w-25 form'>
+            <Form onSubmit={handleSignUp} className='w-full form'>
                 <Form.Group className="mb-3">
                     <Form.Label>Your Name</Form.Label>
                     <Form.Control name='name' type="text" placeholder="Your Name" required/>

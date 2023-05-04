@@ -7,6 +7,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import Login from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Services from "../Home/Services/Services";
 
 const router = createBrowserRouter([
     {
@@ -16,7 +17,14 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('https://awesome-chef-server-md-toybur-rahman.vercel.app/chef')
+                loader: () => fetch('https://awesome-chef-server-md-toybur-rahman.vercel.app/chef'),
+                children: [
+                    {
+                        path: '/',
+                        element: <Services></Services>,
+                        loader: () => fetch('https://awesome-chef-server-md-toybur-rahman.vercel.app/service')
+                    }
+                ]
             },
             {
                 path: '/blog',

@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div className="banner-container d-flex flex-column align-items-center justify-content-center">
             <h2 className='welcome'>Welcome to Our Website</h2>
-            <h1 className='title'>Introduce With Best Chef</h1>
+            <h1 className='section-title'>Introduce With Best Chef</h1>
             <div className='d-flex gap-3 my-3'>
                 <hr className='banner-hr' />
                 <hr className='banner-hr' />
