@@ -24,7 +24,7 @@
 
 # Live Site Link
 
-**[https://job-hunter-50e385.netlify.app/](https://job-hunter-50e385.netlify.app/)**
+**[https://awesome-chef-9bf80.web.app/](https://awesome-chef-9bf80.web.app/)**
 
 
 
