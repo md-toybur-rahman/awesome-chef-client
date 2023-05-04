@@ -8,6 +8,7 @@ import SignUp from "../SignUp/SignUp";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Services from "../Home/Services/Services";
 import MyBlog from "../MyBlog/MyBlog";
+import ChifContainer from "../ChefContainer/ChifContainer";
 
 const router = createBrowserRouter([
     {
@@ -17,12 +18,17 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('https://awesome-chef-server-md-toybur-rahman.vercel.app/chef'),
+                loader: () => fetch('https://awesome-chef-server-md-toybur-rahman.vercel.app/bangladesh'),
                 children: [
                     {
                         path: '/',
                         element: <Services></Services>,
                         loader: () => fetch('https://awesome-chef-server-md-toybur-rahman.vercel.app/service')
+                    },
+                    {
+                        path: '/:country',
+                        element: <ChifContainer></ChifContainer>,
+                        loader: ({ params }) => fetch(`https://awesome-chef-server-md-toybur-rahman.vercel.app/${params.country}`)
                     }
                 ]
             },

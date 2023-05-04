@@ -1,7 +1,6 @@
-// import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './ChefCard.css'
-
 import { Card } from "react-bootstrap";
 
 const ChefCard = ({ chef }) => {
