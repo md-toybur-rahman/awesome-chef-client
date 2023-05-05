@@ -7,7 +7,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const Recipes = () => {
     const recipe = useLoaderData();
-    const { name, experience, recipes, description, picture, likes } = recipe;
+    const { name, experience, recipes, description, picture, likes, country } = recipe;
     return (
         <div className=''>
             <div className='mb-5 d-flex justify-content-center single-chef-container'>
@@ -25,6 +25,7 @@ const Recipes = () => {
                         </div>
                         <h5>Years of Experience: {experience}</h5>
                         <h6>Short Bio: {description}</h6>
+                        <h6>Country: {country}</h6>
                         <h6>Likes: {likes}</h6>
                         <h6>Number Of Recipe: {recipes.length}</h6>
                         <div className='d-flex gap-3 my-3'>
