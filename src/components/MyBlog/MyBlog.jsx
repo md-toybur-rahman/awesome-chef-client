@@ -1,13 +1,17 @@
 import React from 'react';
 import './MyBlog.css'
-
 const MyBlog = () => {
     return (
         <div className='blog-container'>
             <h1 className='section-title'>Answer of All Require Question</h1>
-            <div className='blog'>
-                <h3><span className='highlight'>Question:</span> Differences between uncontrolled and controlled components.</h3>
-                <h4><span className='highlight'>Answer:</span> A control component is a component that is controlled by its parent component through props. They are called control components. And those components which are not controlled by any props or any other component are called uncontrolled components.</h4>
+            <div>
+
+                        <div className='blog'>
+                            <h3><span className='highlight'>Question:</span> Differences between uncontrolled and controlled components.</h3>
+                            <h4><span className='highlight'>Answer:</span> A control component is a component that is controlled by its parent component through props. They are called control components. And those components which are not controlled by any props or any other component are called uncontrolled components.</h4>
+                        </div>
+
+
             </div>
             <div className='blog'>
                 <h3><span className='highlight'>Question:</span> How to validate React props using PropsTypes?</h3>
