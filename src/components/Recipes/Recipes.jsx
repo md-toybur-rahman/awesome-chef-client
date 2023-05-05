@@ -25,7 +25,7 @@ const Recipes = () => {
                         </div>
                         <h5>Years of Experience: {experience}</h5>
                         <h6>Short Bio: {description}</h6>
-                        <h6>LIkes: {likes}</h6>
+                        <h6>Likes: {likes}</h6>
                         <h6>Number Of Recipe: {recipes.length}</h6>
                         <div className='d-flex gap-3 my-3'>
                             <hr className='banner-hr' />

@@ -3,19 +3,11 @@ import { NavLink, Outlet } from 'react-router-dom';
 import './ChefContainer.css'
 
 const ChifContainer = () => {
-    const [isClicked, setIsClicked] = useState(false);
-    const clickHandler = () => {
-        setIsClicked(!isClicked);
-    }
     return (
         <div>
             <div className='chef'>
                 <h1 className='section-title text-center'>Our Chef's</h1>
                 <div className='d-flex gap-3 my-3'>
-                    <hr className='banner-hr' />
-                    <hr className='banner-hr' />
-                    <hr className='banner-hr' />
-                    <hr className='banner-hr' />
                     <hr className='banner-hr' />
                     <hr className='banner-hr' />
                     <hr className='banner-hr' />
